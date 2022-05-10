@@ -1,0 +1,122 @@
+/* technické veci */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+  --bg: #f3f4d7;
+  --link: #e79696;
+  --text: #433a3f;
+  --heading: #71a9f7;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Raleway', sans-serif;
+  margin-top: 6rem;
+}
+a {
+  color: var(--link) !important;
+}
+button {
+  background-color: var(--link) !important;
+  border-color: var(--link) !important;
+}
+p {
+  color: var(--text);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th {
+  color: var(--heading);
+}
+.active {
+  background-color: var(--link) !important;
+  color: white !important;
+}
+div.desktop {
+  background-color: var(--bg);
+}
+header {
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--link);
+}
+
+.section-divider {
+  height: 4rem;
+}
+.mobile {
+  display: none;
+  background-color: white;
+}
+.desktop {
+  background-color: white;
+}
+.container {
+  padding: 0 2rem;
+}
+.footer {
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* vizuálne úpravy */
+.nav {
+  font-size: 0.9375rem;
+}
+.logo {
+  color: var(--link);
+}
+.footer-text {
+  text-align: center;
+  padding: 1.5rem;
+  color: #6c757d;
+}
+img {
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.about-me-img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.about-me-images {
+  border-radius: 4px;
+  height: inherit;
+}
+table {
+  width: 100%;
+}
+th,
+td {
+  border: 1px solid black;
+  text-align: center;
+}
+/* rôzne window šírky */
+@media only screen and (max-width: 768px) {
+  body {
+    margin-top: 9rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    margin-top: 6rem;
+  }
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+  .about-me-images {
+    margin-bottom: 1rem;
+  }
+}

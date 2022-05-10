@@ -1,0 +1,153 @@
+:root {
+  --bg: #f3f4d7;
+  --link: #e79696;
+  --text: #433a3f;
+  --heading: #71a9f7;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.up-link-container {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+}
+.grid-container {
+  width: 60%;
+}
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    'one three five'
+    'eight nine five'
+    'redhot redhot four'
+    'eleven ten ten'
+    'six seven twelve';
+}
+
+.image-1 {
+  grid-area: one;
+}
+.image-2 {
+  grid-area: two;
+}
+.image-3 {
+  grid-area: three;
+}
+.image-4 {
+  grid-area: four;
+}
+.image-5 {
+  grid-area: five;
+}
+.image-6 {
+  grid-area: six;
+}
+.image-7 {
+  grid-area: seven;
+}
+.image-8 {
+  grid-area: eight;
+}
+.image-9 {
+  grid-area: nine;
+}
+.image-10 {
+  grid-area: ten;
+}
+.image-11 {
+  grid-area: eleven;
+}
+.image-12 {
+  grid-area: twelve;
+}
+.image-redhot {
+  grid-area: redhot;
+}
+.gallery-image-container {
+  background-color: #6c757d;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.gallery-image {
+  height: 100%;
+}
+
+.arrow {
+  margin: 2rem;
+  height: 3rem;
+  width: 3rem;
+  transition: 1s;
+}
+.arrow-link {
+  display: block;
+  height: inherit;
+  width: inherit;
+  position: relative;
+  transition: 1s;
+}
+.arrow-img {
+  height: 100%;
+  width: 100%;
+  transition: 1s;
+}
+
+/* .arrow-link:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  border: 4px solid white;
+  -webkit-transition: 1s;
+  transition: 1s;
+} */
+.arrow-link:hover::after {
+  transition: 1s;
+
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  border: 4px solid white;
+  background-color: var(--link);
+  outline: 2px solid var(--link);
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    margin-top: 9rem;
+  }
+  div.grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      'one'
+      'two'
+      'three'
+      'four'
+      'five'
+      'six'
+      'seven'
+      'eight'
+      'nine'
+      'ten'
+      'eleven'
+      'twelve'
+      'redhot';
+  }
+}
